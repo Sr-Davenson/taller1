@@ -15,5 +15,6 @@
             <button type="submit">Enviar</button>
         </fieldset>
     </form>
+    <a href="index.php">Ir a inicio</a>
 </body>
 </html>
