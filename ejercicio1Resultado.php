@@ -14,5 +14,7 @@
 
     echo $metodos->ejercicio1($palabra);
 ?>
+<a href="ejercicio1.php">Convertir otra palabra</a> <br>
+<a href="index.php">Ir a inicio</a>
 </body>
 </html>
