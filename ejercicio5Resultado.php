@@ -3,18 +3,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Resultado Ejercicio 1</title>
+    <title>Resultado Ejercicio 5</title>
 </head>
 <body>
 <?php
     include "metodos.php";
 
-    $palabra = $_POST['palabra'];
+    $numero = $_POST['numero'] ?? '';
     $metodos = new Metodos();
 
-    echo $metodos->ejercicio1($palabra);
+    echo $metodos->ejercicio5($palabra);
 ?>
-<a href="ejercicio1.php">Convertir otra palabra</a> <br>
+<a href="ejercicio1.php">Convertir otro numero</a> <br>
 <a href="index.php">Ir a inicio</a>
 </body>
 </html>
