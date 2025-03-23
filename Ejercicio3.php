@@ -17,7 +17,7 @@
             </div>
             <button type="submit" class="btn">Calcular</button>
         </form>
-
+        <a href="index.php">Ir a inicio</a>
         <?php
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $entrada = trim($_POST["numeros"]);

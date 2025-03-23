@@ -19,6 +19,7 @@
             <button type="submit">Calcular</button>
         </form>
     </div>
+    <a href="index.php">Ir a inicio</a>
 
     <?php
     class Conjunto {
