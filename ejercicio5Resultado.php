@@ -12,9 +12,9 @@
     $numero = $_POST['numero'] ?? '';
     $metodos = new Metodos();
 
-    echo $metodos->ejercicio5($palabra);
+    echo $metodos->ejercicio5($numero);
 ?>
-<a href="ejercicio1.php">Convertir otro numero</a> <br>
+<a href="ejercicio5.php">Convertir otro numero</a> <br>
 <a href="index.php">Ir a inicio</a>
 </body>
 </html>

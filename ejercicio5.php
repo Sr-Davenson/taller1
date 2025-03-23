@@ -9,7 +9,7 @@
     <p>Bienvenido! convierte tus numeros enteros a binario</p>
     <form action="ejercicio5Resultado.php" method="post">
         <fieldset>
-            <legend>Ingresa tus números aquí</legend>
+            <legend>Ingresa tu número aquí</legend>
             <input type="number" name="numero" required>
             <button type="submit">Enviar</button>
         </fieldset>

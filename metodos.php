@@ -29,17 +29,13 @@ class Metodos {
     public function ejercicio5($numero) {
 
         if (!is_numeric($numero)) {
-            return "Error: Se ingresó un número. Por favor, ingresa un texto válido.";
+            return "Error: Se no ingresó un número válido.";
         }
+        $binario = decbin($numero);
 
-        foreach ($separarPalabra as $palabraIndividual) {
-            if (!empty($palabraIndividual)) {
-                $acronimo .= strtoupper($palabraIndividual[0]);
-            }
-        }
 
-        $mensaje = "<p>Palabra ingresada: " . $palabra . "</p>";
-        $mensaje .= "<p>Acrónimo generado: " . $acronimo. "</p>";
+        $mensaje = "<p>Número ingresado: " . $numero . "</p>";
+        $mensaje .= "<p>Binario generado: " . $binario. "</p>";
         return $mensaje;
     }
 }

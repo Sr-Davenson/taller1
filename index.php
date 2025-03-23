@@ -1,10 +1,9 @@
 <?php
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplicaciones</title>
 </head>
 <body>
@@ -20,7 +19,7 @@
     <h1>Ejercio 4</h1>
     <a href=""> Ejercicio 4</a>
     <h1>Ejercio 5</h1>
-    <a href=""> Ejercicio 5</a>
+    <a href="ejercicio5.php"> Ejercicio 5</a>
     <h1>Ejercio 6</h1>
     <a href=""> Ejercicio 6</a>
     
