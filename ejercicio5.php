@@ -10,7 +10,7 @@
     <form action="ejercicio5Resultado.php" method="post">
         <fieldset>
             <legend>Ingresa tu número aquí</legend>
-            <input type="number" name="numero" required>
+            <input type="number" name="numero" required min="0">
             <button type="submit">Enviar</button>
         </fieldset>
     </form>
