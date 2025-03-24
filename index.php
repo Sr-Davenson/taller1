@@ -1,13 +1,13 @@
 <?php
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplicaciones</title>
 </head>
 <body>
+<<<<<<< HEAD
     <table>
 
     </table>
@@ -24,5 +24,37 @@
     <h1>Ejercio 6</h1>
     <a href=""> Ejercicio 6</a>
     
+=======
+    <table border = "1">
+        <tr>
+            <td><h1>Aplicaciones</h1></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><h2>1.Convertidor de nombres a acrónimos</h2></td>
+            <td><a href="ejercicio1.php">Ir al ejercicio</a></td>
+        </tr>
+        <tr>
+            <td><h2>2.Calculadora de fibonacci y factorial</h2></td>
+            <td><a href="exercise2.php">Ir al ejercicio</a></td>
+        </tr>
+        <tr>
+            <td><h2>3.Cálculadora estadística</h2></td>
+            <td><a href="Ejercicio3.php">Ir al ejercicio</a></td>
+        </tr>
+        <tr>
+            <td><h2>4.Calculadora de conjuntos</h2></td>
+            <td><a href="Ejercicio4.php">Ir al ejercicio</a></td>
+        </tr>
+        <tr>
+            <td><h2>5.Convertidor de números a binarios</h2></td>
+            <td><a href="ejercicio5.php">Ir al ejercicio</a></td>
+        </tr>
+        <tr>
+            <td><h2>6.Recorridos Árbol Binario</h2></td>
+            <td><a href="exercise6.php">Ir al ejercicio</a></td>
+        </tr>
+    </table> 
+>>>>>>> b4a6fd0239493c8ef65464194dd670ba016d4095
 </body>
 </html>

@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul ul {
+    border-left: 1px solid #ddd;
+    margin-left: 20px;
+}
+
+li {
+    margin: 10px 0;
+}
