@@ -1,66 +1,27 @@
 <?php
-// Validar
-Class Valide{
-    //Validación de números
-    public function validateNumber($number)
-    {
-        try {
-            if (!is_numeric($number)) {
-                throw new Exception("El valor ingresado no es un número.");
-            }
-            if ($number < 0) {
-                throw new Exception("El número debe ser mayor o igual a 0.");
-            }
-            return true;
-        } catch (Exception $e) {
-            return $e->getMessage();
+require_once 'metodos.php';
+
+$operaciones = new Operations();
+$validar = new Valide();
+
+$resultado = "";
+$error = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $numero = $_POST['numero'];
+    $operacion = $_POST['operacion'];
+
+    // Validar
+    $validacion = $validar->validateNumber($numero);
+    if ($validacion === true) {
+        if ($operacion === "fibonacci") {
+            $resultadoArray = $operaciones->fibonacciSerie($numero);
+            $resultado = is_array($resultadoArray) ? implode(", ", $resultadoArray) : $resultadoArray;
+        } elseif ($operacion === "factorial") {
+            $resultado = $operaciones->factorialCalculation($numero);
         }
+    } else {
+        $error = $validacion; // Mensaje de error proporcionado por el Validador
     }
 }
-//Calculo para la serie de fibonacci
-Class Operations{
-    public function fibonacciSerie($n){
-        try{
-            if(!is_numeric($n) || $n < 0){
-                throw new Exception("");
-            }
-            $serie = [];
-            $a = 0;
-            $b = 1;
-
-            for($i= 0; $i<$n; $i++){
-                $serie[] = $a;
-                $aux = $a + $b;
-                $a = $b;
-                $b = $aux;
-            }
-            return $serie;
-        } catch (Exception $e){
-            return ["Error: " - $e->getMessage()];
-        }
-    }
-
-    //Calculo para factorial
-    public function factorialCalculation($n){
-        try {
-            if (!is_numeric($n) || $n < 0) {
-                throw new Exception("");
-            }
-
-            if ($n == 0 || $n == 1) {
-                return 1;
-            }
-
-            $aux = 1;
-            for ($i = 2; $i <= $n; $i++) {
-                $aux *= $i;
-            }
-
-            return $aux;
-        } catch (Exception $e) {
-            return "Error: " . $e->getMessage();
-        }
-    }
-}  
-
-//Exercise6 - Arbol binario
+?>
