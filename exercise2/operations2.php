@@ -61,5 +61,6 @@ Class Operations{
             return "Error: " . $e->getMessage();
         }
     }
-    
 }  
+
+//Exercise6 - Arbol binario

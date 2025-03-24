@@ -46,7 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <label for="fibonacci">Fibonacci</label><br>
         <input type="radio" id="factorial" name="operacion" value="factorial" required>
         <label for="factorial">Factorial</label><br><br>
-
         <button type="submit">Calcular</button>
     </form>
 
