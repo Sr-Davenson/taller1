@@ -7,7 +7,7 @@
 }
 
 .container {
-    max-width: 900px; /* Aumenté el ancho del contenedor */
+    max-width: 900px; 
     margin: 50px auto;
     background: #f9d4f7;
     padding: 30px;
@@ -45,7 +45,7 @@
 .btn {
     background-color: #007BFF;
     color: #fff;
-    border: 2px solid #0056b3; /* Agregado borde */
+    border: 2px solid #0056b3; 
     padding: 12px 18px;
     font-size: 1rem;
     border-radius: 6px;
