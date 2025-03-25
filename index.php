@@ -37,5 +37,6 @@
             <td><a href="exercise6.php">Ir al ejercicio</a></td>
         </tr>
     </table> 
+    <a href="p.php">adsadada</a>
 </body>
 </html>
