@@ -57,6 +57,9 @@ Class Valide{
         }
     }
 }
+
+//calculo estadistico
+
 //Calculo para la serie de fibonacci
 Class Operations{
     public function fibonacciSerie($n){
