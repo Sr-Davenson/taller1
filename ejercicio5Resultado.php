@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Resultado Ejercicio 5</title>
+    <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
+<h1>Resultado Ejercicio!</h1>
+<div class="info">
 <?php
     include "metodos.php";
 
@@ -14,7 +17,11 @@
 
     echo $metodos->ejercicio5($numero);
 ?>
+</div>
+<div class="bot">
 <a href="ejercicio5.php">Convertir otro numero</a> <br>
+</div>
+<br>
 <a href="index.php">Ir a inicio</a>
 </body>
 </html>

@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
     <h1>Ejercicio 5</h1>
+    <div class="info">
     <p>Bienvenido! convierte tus numeros enteros a binario</p>
     <form action="ejercicio5Resultado.php" method="post">
-        <fieldset>
-            <legend>Ingresa tu número aquí</legend>
-            <input type="number" name="numero" required min="0">
-            <button type="submit">Enviar</button>
-        </fieldset>
+        <legend>Ingresa tu número aquí:</legend>
+        <input type="number" name="numero" required min="0" placeholder="Ej: 15">
+        <button type="submit">Enviar</button>
     </form>
+        </div>
+    <br>
+
     <a href="index.php">Ir a inicio</a>
 </body>
 </html>
