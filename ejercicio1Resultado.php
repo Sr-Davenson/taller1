@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Resultado Ejercicio 1</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="s.css">
 </head>
 <body>
     <h1>Resultado Ejercicio!</h1>

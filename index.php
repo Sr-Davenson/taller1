@@ -5,9 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Aplicaciones</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table border = "1">
+    <table>
         <tr>
             <td><h1>Aplicaciones</h1></td>
             <td></td>
