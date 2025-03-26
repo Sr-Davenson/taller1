@@ -4,20 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="s.css">
     <title>Ejercicio 3</title>
 </head>
 <body class="body">
-    <div class="container">
-        <h1 class="title">Calculadora Estadística</h1>
+    <h1 class="title">Calculadora Estadística</h1>
+    <div class="info">
+        <br>
         <form method="POST" action="" class="form">
-            <div class="form-group">
-                <label for="numeros" class="label">Ingrese números separados por comas:</label>
+            <legend>Ingresa tu número aquí:</legend>
                 <input type="text" id="numeros" name="numeros" placeholder="Ejemplo: 1,2,3,4,5" required class="input">
-            </div>
-            <button type="submit" class="btn">Calcular</button>
+            <button type="submit">Enviar</button>
         </form>
-        
+    <br>        
         <?php
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $entrada = trim($_POST["numeros"]);
@@ -31,7 +30,7 @@
         $numeros = array_map('floatval', explode(",", $entrada));
         $calculadora = new CalculadoraEstadistica($numeros);
                 echo "<div class='results'>";
-                echo "<h2 class='results-title'>Resultados</h2>";
+                echo "<h2 class='results-title'>Resultados:</h2>";
                 echo "<p class='result'><strong>Promedio:</strong> " .$calculadora->calcularPromedio(). "</p>";
                 echo "<p class='result'><strong>Mediana:</strong> " . $calculadora->calcularMediana() . "</p>";
                 echo "<p class='result'><strong>Moda:</strong> " .$calculadora->calcularModa(). "</p>";
@@ -39,8 +38,10 @@
             }
         }
         ?>
-        <a href="index.php">Ir a inicio</a>
     </div>
+    <br>
+
+<a href="index.php">Ir a inicio</a>
 </body>
 </html>
     

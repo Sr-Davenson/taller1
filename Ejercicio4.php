@@ -1,51 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles4.css">
+    <link rel="stylesheet" href="s.css">
     <title>Ejercicio 4</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Operaciones con Conjuntos</h1>
+<h1>Operaciones con Conjuntos</h1>
+    <div class="info">
+    <br>
         <form action="" method="post">
             <label for="setA">Conjunto A (separados por comas):</label>
             <input type="text" id="setA" name="setA" required>
-            
+            <br>
             <label for="setB">Conjunto B (separados por comas):</label>
             <input type="text" id="setB" name="setB" required>
             
             <button type="submit">Calcular</button>
         </form>
-    </div>
-    <a href="index.php">Ir a inicio</a>
 
-    <?php
-    class Conjunto {
-        private $valores;
-
-        public function __construct($valores) {
-        $this->valores = array_unique(array_map('intval', explode(',', $valores)));
-        }
-
-        public function getValores() {
-        return $this->valores;
-        }
-
-        public function union(Conjunto $otro) {
-        return array_unique(array_merge($this->valores, $otro->getValores()));
-        }
-
-        public function interseccion(Conjunto $otro) {
-        return array_intersect($this->valores, $otro->getValores());
-        }
-
-        public function diferencia(Conjunto $otro) {
-        return array_diff($this->valores, $otro->getValores());
-        }
-    }
-
+   <?php
+   include "Conjunto.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $setA = filter_var($_POST['setA'], FILTER_SANITIZE_STRING);
     $setB = filter_var($_POST['setB'], FILTER_SANITIZE_STRING);
@@ -66,6 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-     
+    </div>
+    <br>
+    <a href="index.php">Ir a inicio</a>
 </body>
 </html>

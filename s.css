@@ -10,7 +10,10 @@ h1{
     text-align: center;
     color: #000000;
 }
-
+.results-title{
+    color: #ffffff;
+    margin-left: 15vh;
+}
 .info {
     background-color: #000000 ;
     border-radius: 10px;
@@ -25,6 +28,9 @@ ul{
 }
 legend{
     margin-bottom: 3vh;
+    margin-left: 20vh;
+}
+label{
     margin-left: 20vh;
 }
 input{
