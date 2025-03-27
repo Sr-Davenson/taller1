@@ -33,6 +33,13 @@ legend{
 label{
     margin-left: 20vh;
 }
+
+.opc label{
+    margin-left: 30vh;
+}
+.opc input{
+    margin-left: 10vh;
+}
 input{
     margin-left: 40vh;
     height: 2vw;
