@@ -25,7 +25,7 @@
             } elseif (!preg_match('/^(\d+(\.\d+)?,?)+$/', $entrada)) {
                 echo "<p class='error'>Error: Los datos ingresados son inválidos. Asegúrese de usar números separados por comas (por ejemplo: 1,2,3,4).</p>";
             } else {
-        include "CalculadoraEstadistica.php";
+        include "metodos/CalculadoraEstadistica.php";
         $numeros = $_POST['numeros'];
         $numeros = array_map('floatval', explode(",", $entrada));
         $calculadora = new CalculadoraEstadistica($numeros);
