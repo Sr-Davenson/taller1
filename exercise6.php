@@ -4,27 +4,30 @@ require_once 'dibujarArbol.php';
 
 $arbol = new ArbolBinario();
 $dibujo = new DibujarArbol();
-$resultado = "";
+
+$resultadoDibujo = "";
+$recorridoFaltante = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $preorder = !empty($_POST['preorder']) ? array_map('trim', explode(",", $_POST['preorder'])) : [];
-    $inorder = !empty($_POST['inorder']) ? array_map('trim', explode(",", $_POST['inorder'])) : [];
-    $postorder = !empty($_POST['postorder']) ? array_map('trim', explode(",", $_POST['postorder'])) : [];
+    $preorder = !empty($_POST['preorder']) ? explode(",", $_POST['preorder']) : [];
+    $inorder = !empty($_POST['inorder']) ? explode(",", $_POST['inorder']) : [];
+    $postorder = !empty($_POST['postorder']) ? explode(",", $_POST['postorder']) : [];
 
     if (!empty($preorder) && !empty($inorder)) {
         $arbol->constructPreInorder($preorder, $inorder);
+        $recorridoFaltante = "PostOrder: " . implode(", ", $arbol->generatePostOrder($arbol->getRaiz()));
     } elseif (!empty($postorder) && !empty($inorder)) {
         $arbol->constructPostInorder($postorder, $inorder);
+        $recorridoFaltante = "PreOrder: " . implode(", ", $arbol->generatePreOrder($arbol->getRaiz()));
+    } elseif (!empty($preorder) && !empty($postorder)) {
+        // Calcular InOrder si PreOrder y PostOrder están disponibles
+        $recorridoFaltante = "InOrder: " . implode(", ", $arbol->generateInOrder($arbol->getRaiz()));
     } else {
-        $resultado = "Error: Debes ingresar al menos dos recorridos, incluyendo el InOrder.";
+        $recorridoFaltante = "Error: Debes ingresar dos recorridos.";
     }
 
     $raiz = $arbol->getRaiz();
-    if ($raiz === null) {
-        $resultado = "Error: No se pudo construir el árbol. Revisa los recorridos ingresados.";
-    } else {
-        $resultado = $dibujo->dibujar($raiz);
-    }
+    $resultadoDibujo = $dibujo->dibujarVertical($raiz);
 }
 ?>
 <!DOCTYPE html>
@@ -32,12 +35,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 6</title>
-    <link rel="stylesheet" href="styleArbolBinario.css">
+    <title>Árbol Binario</title>
+    <link rel="stylesheet" href="">
 </head>
 <body>
-    <h1>Árbol binario y sus recorridos</h1>
-    <form method="POST" action="">
+    <h1>Construcción de Árbol Binario</h1>
+
+    <form method="POST">
         <label for="preorder">Recorrido PreOrder:</label>
         <input type="text" id="preorder" name="preorder" placeholder="A,B,C,D,E"><br><br>
 
@@ -45,14 +49,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <input type="text" id="postorder" name="postorder" placeholder="E,D,C,B,A"><br><br>
 
         <label for="inorder">Recorrido InOrder:</label>
-        <input type="text" id="inorder" name="inorder" placeholder="D,B,E,A,C" required><br><br>
+        <input type="text" id="inorder" name="inorder" placeholder="D,B,E,A,C"><br><br>
 
-        <button type="submit">Recorridos</button>
+        <button type="submit">Construir Árbol</button>
     </form>
-    <h2>Resultado:</h2>
-    <div id="arbol">
-        <?php echo $resultado; ?>
-    </div>
-    <a href="index.php">Ir a inicio</a>
+
+    <h2>Recorrido Faltante:</h2>
+    <p><?php echo $recorridoFaltante; ?></p>
+
+    <h2>Árbol Visual:</h2>
+    <div><?php echo $resultadoDibujo; ?></div>
+    <a href="index.php">Inicio/a>
 </body>
 </html>

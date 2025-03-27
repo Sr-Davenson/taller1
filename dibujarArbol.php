@@ -2,7 +2,7 @@
 require_once 'nodo.php';
 
 class DibujarArbol {
-    public function dibujar($nodo) {
+    public function dibujarVertical($nodo) {
         if ($nodo === null) {
             return "";
         }
@@ -12,8 +12,8 @@ class DibujarArbol {
 
         if ($nodo->izquierdo !== null || $nodo->derecho !== null) {
             $html .= "<ul>";
-            $html .= "<li>" . $this->dibujar($nodo->izquierdo) . "</li>";
-            $html .= "<li>" . $this->dibujar($nodo->derecho) . "</li>";
+            $html .= "<li>" . $this->dibujarVertical($nodo->izquierdo) . "</li>";
+            $html .= "<li>" . $this->dibujarVertical($nodo->derecho) . "</li>";
             $html .= "</ul>";
         }
 

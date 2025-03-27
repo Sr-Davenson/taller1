@@ -8,22 +8,23 @@ class ArbolBinario {
         $this->raiz = null;
     }
 
-    // Método para construir el árbol desde PreOrder e InOrder
+    // Construcción desde PreOrder e InOrder
     public function constructPreInorder($preorder, $inorder) {
         $this->raiz = $this->constructPreInAux($preorder, $inorder);
     }
 
-    // Método para construir el árbol desde Postorden e Inorden
+    // Construcción desde PostOrder e InOrder
     public function constructPostInorder($postorder, $inorder) {
         $this->raiz = $this->constructPostInAux($postorder, $inorder);
     }
 
+    // Construcción recursiva desde PreOrder e InOrder
     private function constructPreInAux($preorder, $inorder) {
         if (empty($preorder) || empty($inorder)) {
             return null;
         }
 
-        $raizValor = array_shift($preorder);
+        $raizValor = array_shift($preorder); // Raíz es el primero en PreOrder
         $raiz = new Nodo($raizValor);
 
         $posicionRaiz = array_search($raizValor, $inorder);
@@ -40,12 +41,13 @@ class ArbolBinario {
         return $raiz;
     }
 
+    // Construcción recursiva desde PostOrder e InOrder
     private function constructPostInAux($postorder, $inorder) {
         if (empty($postorder) || empty($inorder)) {
             return null;
         }
 
-        $raizValor = array_pop($postorder);
+        $raizValor = array_pop($postorder); // Raíz es el último en PostOrder
         $raiz = new Nodo($raizValor);
 
         $posicionRaiz = array_search($raizValor, $inorder);
@@ -62,6 +64,25 @@ class ArbolBinario {
         return $raiz;
     }
 
+    // Generar recorrido PreOrder
+    public function generatePreOrder($nodo) {
+        if ($nodo === null) return [];
+        return array_merge([$nodo->valor], $this->generatePreOrder($nodo->izquierdo), $this->generatePreOrder($nodo->derecho));
+    }
+
+    // Generar recorrido InOrder
+    public function generateInOrder($nodo) {
+        if ($nodo === null) return [];
+        return array_merge($this->generateInOrder($nodo->izquierdo), [$nodo->valor], $this->generateInOrder($nodo->derecho));
+    }
+
+    // Generar recorrido PostOrder
+    public function generatePostOrder($nodo) {
+        if ($nodo === null) return [];
+        return array_merge($this->generatePostOrder($nodo->izquierdo), $this->generatePostOrder($nodo->derecho), [$nodo->valor]);
+    }
+
+    // Obtener la raíz
     public function getRaiz() {
         return $this->raiz;
     }
