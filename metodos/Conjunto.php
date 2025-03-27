@@ -1,9 +1,9 @@
 <?php
     class Conjunto {
         private $valores;
-
+        
         public function __construct($valores) {
-        $this->valores = array_unique(array_map('intval', explode(',', $valores)));
+            $this->valores = array_unique(explode(',', $valores)); // Sin convertir a enteros
         }
 
         public function getValores() {
