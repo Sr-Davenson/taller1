@@ -39,3 +39,21 @@ a:hover{
 a:active{
     background-color: #12460d;
 }
+
+button{
+    background-color: #007BFF;
+    color: #fff;
+    border:3px solid #ffffff00;
+    padding: 8px 12px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+
+button:hover{
+    border: 3px solid #ffffff;
+    background-color: #67b0ff;
+    border-radius: 4px;
+}
+button:active{
+    background-color: #054283;
+}

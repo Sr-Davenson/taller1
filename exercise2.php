@@ -1,5 +1,5 @@
 <?php
-require_once 'metodos/operations2.php';
+include 'metodos/operations2.php';
 
 $operaciones = new Operations();
 $validar = new Valide();

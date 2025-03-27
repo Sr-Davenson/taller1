@@ -1,6 +1,6 @@
 <?php
-require_once 'arbolBinario.php';
-require_once 'dibujarArbol.php';
+include 'arbolBinario.php';
+include 'dibujarArbol.php';
 
 $arbol = new ArbolBinario();
 $dibujo = new DibujarArbol();
@@ -39,8 +39,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
     <h1>Construcción de Árbol Binario</h1>
-
+    <div class="info">
     <form method="POST">
+        <br>
         <label for="preorder">Recorrido PreOrder:</label>
         <input type="text" id="preorder" name="preorder" placeholder="A,B,C,D,E"><br><br>
 
@@ -58,6 +59,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <h2>Árbol Visual:</h2>
     <div><?php echo $resultadoDibujo; ?></div>
+    <br>
+    </div>
+    <br>
     <a href="../index.php">Ir a inicio</a>
 </body>
 </html>
