@@ -10,6 +10,9 @@ h1{
     text-align: center;
     color: #000000;
 }
+.opc h2{
+    margin-left: 5vw;
+}
 .results-title{
     color: #ffffff;
     margin-left: 15vh;

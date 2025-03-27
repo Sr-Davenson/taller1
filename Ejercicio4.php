@@ -11,10 +11,10 @@
     <br>
         <form action="" method="post">
             <label for="setA">Conjunto A (separados por comas):</label>
-            <input type="text" id="setA" name="setA" required>
+            <input type="text" id="setA" name="setA"  placeholder="Ej: a,b,c,d" required>
             <br>
             <label for="setB">Conjunto B (separados por comas):</label>
-            <input type="text" id="setB" name="setB" required>
+            <input type="text" id="setB" name="setB"  placeholder="Ej: a,b,c,d" required>
             
             <button type="submit">Calcular</button>
         </form>
