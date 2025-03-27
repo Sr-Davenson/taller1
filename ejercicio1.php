@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio 1</title>
-    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="CSS/s.css">
 </head>
 <body>
     <h1>Ejercicio 1</h1>
@@ -14,7 +14,7 @@
     <ul>- Liquid-crystal display -> LCD </ul>
     <ul>- Thank George It's Friday! -> TGIF</ul> 
     <br>
-        <form action="ejercicio1Resultado.php" method="post">
+        <form action="metodos/ejercicio1Resultado.php" method="post">
                 <legend>Ingresa tus palabras aquí:</legend>
                 <input type="text" name="palabra" placeholder="Ingresa tu palabra" required>
                 <button type="submit">Enviar</button>

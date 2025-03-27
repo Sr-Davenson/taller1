@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Aplicaciones</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
     <table>
@@ -35,7 +35,7 @@
         </tr>
         <tr>
             <td><h2>6. Recorridos Árbol Binario</h2></td>
-            <td><a href="exercise6.php">Ir al ejercicio</a></td>
+            <td><a href="arbolBinario/exercise6.php">Ir al ejercicio</a></td>
         </tr>
     </table> 
 </body>

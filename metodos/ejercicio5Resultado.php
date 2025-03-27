@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Resultado Ejercicio 5</title>
-    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="../CSS/s.css">
 </head>
 <body>
 <h1>Resultado Ejercicio!</h1>
@@ -19,9 +19,10 @@
 ?>
 </div>
 <div class="bot">
-<a href="ejercicio5.php">Convertir otro numero</a> <br>
+<a href="../ejercicio5.php">Convertir otro numero</a> <br>
 </div>
 <br>
-<a href="index.php">Ir a inicio</a>
+<a href="../index.php">Ir a inicio</a>
+
 </body>
 </html>

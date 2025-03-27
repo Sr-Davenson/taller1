@@ -34,9 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/p1.css">
     <title>Árbol Binario</title>
-    <link rel="stylesheet" href="">
 </head>
 <body>
     <h1>Construcción de Árbol Binario</h1>
@@ -59,6 +58,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <h2>Árbol Visual:</h2>
     <div><?php echo $resultadoDibujo; ?></div>
-    <a href="index.php">Inicio/a>
+    <a href="../index.php">Ir a inicio</a>
 </body>
 </html>

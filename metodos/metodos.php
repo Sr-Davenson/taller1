@@ -12,7 +12,7 @@ class Metodos {
             return "<div class='info'><p>Error: Se ingresó un número ".$palabra." <br>Por favor, ingresa un texto válido.</p></div>";
         }
 
-        $separarPalabra = preg_split('/[\s-]+/', $palabra);
+        $separarPalabra = preg_split('/[\s\-_]+/', $palabra);
 
         $acronimo = '';
         foreach ($separarPalabra as $palabraIndividual) {

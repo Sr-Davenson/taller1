@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="CSS/s.css">
     <title>Ejercicio 4</title>
 </head>
 <body>
@@ -15,12 +15,11 @@
             <br>
             <label for="setB">Conjunto B (separados por comas):</label>
             <input type="text" id="setB" name="setB"  placeholder="Ej: a,b,c,d" required>
-            
             <button type="submit">Calcular</button>
         </form>
 
    <?php
-   include "Conjunto.php";
+   include "metodos/Conjunto.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $setA = filter_var($_POST['setA'], FILTER_SANITIZE_STRING);
     $setB = filter_var($_POST['setB'], FILTER_SANITIZE_STRING);

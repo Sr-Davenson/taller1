@@ -1,5 +1,5 @@
 <?php
-require_once 'exercise2/operations2.php';
+require_once 'metodos/operations2.php';
 
 $operaciones = new Operations();
 $validar = new Valide();
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio 2</title>
-    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="CSS/s.css">
 </head>
 <body>
     <h1>Calculadora de Fibonacci y Factorial</h1>

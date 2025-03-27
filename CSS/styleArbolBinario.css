@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid #ddd;
+    margin-left: 20px;
+}
+
+
+li {
+    margin: 10px 0;
+}
+a{
+    background-color: #1f8e15;
+    color: #fff;
+    border:3px solid #ffffff00;
+    padding: 8px 12px;
+    font-size: 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 30vh 43vw 0px 46vw;
+
+}
+
+a:hover{
+    border: 3px solid #ffffff;
+    background-color: #86ce80;
+    border-radius: 4px;
+}
+a:active{
+    background-color: #12460d;
+}
