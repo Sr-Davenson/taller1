@@ -4,12 +4,12 @@ class Metodos {
     function __construct(){
     }
     public function ejercicio1($palabra) {
-        if (empty($palabra)) {
-            return "No ingresaste ninguna palabra.";
+        if (trim($palabra) === '') {
+            return "<div class='info'><p>Error: La palabra ingresada está llena de espacios. Por favor, ingresa un texto válido.</p></div>";
         }
 
         if (is_numeric($palabra)) {
-            return "Error: Se ingresó un número ".$palabra." Por favor, ingresa un texto válido.";
+            return "<div class='info'><p>Error: Se ingresó un número ".$palabra." <br>Por favor, ingresa un texto válido.</p></div>";
         }
 
         $separarPalabra = preg_split('/[\s-]+/', $palabra);
@@ -20,22 +20,25 @@ class Metodos {
                 $acronimo .= strtoupper($palabraIndividual[0]);
             }
         }
-
-        $mensaje = "<p>Palabra ingresada: " . $palabra . "</p>";
+        $mensaje = "<div class='info'>";
+        $mensaje .= "<p>Palabra ingresada: " . $palabra . "</p>";
         $mensaje .= "<p>Acrónimo generado: " . $acronimo. "</p>";
+        $mensaje .= "</div>";
         return $mensaje;
+
     }
 
     public function ejercicio5($numero) {
 
         if (!is_numeric($numero)) {
-            return "Error: Se no ingresó un número válido.";
+            return "<div class='info'><p>Error: Se no ingresó un número válido.</p></div>";
         }
         $binario = decbin($numero);
 
-
-        $mensaje = "<p>Número ingresado: " . $numero . "</p>";
+        $mensaje = "<div class='info'>";
+        $mensaje .= "<p>Número ingresado: " . $numero . "</p>";
         $mensaje .= "<p>Binario generado: " . $binario. "</p>";
+        $mensaje .= "</div>";
         return $mensaje;
     }
 }
